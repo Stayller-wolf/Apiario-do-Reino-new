@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/assets/style.css">
+    <link rel="stylesheet" href="./public/assets/carrinho_vazio.css">
+    <script src="./public/script/whatsapp_checkout.js" defer></script>
+    <script src="./public/script/carrinho.js" defer></script>
+    <script src="./public/script/add_check.js" defer></script>
+    <title>Carrinho de Compras - Ápiario do Reino</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🐝</span>
+                    <span>Ápiario do Reino</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produto.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="contatos.html">Contato</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <a href="carrinho.html">🛒</a>
+                    <span class="cart-count"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Carrinho de Compras</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Início</a></li>
+                <li class="separator">/</li>
+                <li class="current">Carrinho</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="cart-empty">
+        <div class="bee-decoration" style="top: 10%; left: 20%;"></div>
+        <div class="bee-decoration" style="top: 30%; left: 80%;"></div>
+        
+        <div class="empty-cart-image"></div>
+        <div class="cart-empty-icon">🍯</div>
+        
+        <h2>Seu Carrinho de Mel Está Vazio</h2>
+        <p>Parece que você ainda não adicionou nenhuma doçura ao seu carrinho. Que tal explorar nossos produtos apícolas naturais?</p>
+        
+        <div class="honey-drops">
+            <div class="honey-drop"></div>
+            <div class="honey-drop"></div>
+            <div class="honey-drop"></div>
+        </div>
+        
+        <a href="produto.html" class="explore-button">Descobrir Produtos Apícolas</a>
+        
+        <div class="suggestions-after-empty">
+            <p>Produtos mais vendidos:</p>
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+                <div style="border-radius: 50%; width: 50px; height: 50px; background-color: #f9e8c0; display: flex; align-items: center; justify-content: center; font-size: 20px;">🍯</div>
+                <div style="border-radius: 50%; width: 50px; height: 50px; background-color: #f9e8c0; display: flex; align-items: center; justify-content: center; font-size: 20px;">🐝</div>
+                <div style="border-radius: 50%; width: 50px; height: 50px; background-color: #f9e8c0; display: flex; align-items: center; justify-content: center; font-size: 20px;">🌼</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <!-- Cart with Items -->
+        <div class="cart-container">
+            <div class="cart-header">
+                <div>Produto</div>
+                <div>Descrição</div>
+                <div>Preço</div>
+                <div>Quantidade</div>
+                <div>Subtotal</div>
+                <div></div>
+            </div>
+            <div class="cart-items">
+            </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h2 class="summary-title">Resumo da Compra</h2>
+            <div class="summary-row">
+                <div class="cart-summary">
+                        <div class="summary-row">
+                            <div class="summary-label">Subtotal (0 itens)</div>
+                        </div>
+                    </div>
+                <div class="summary-value">R$ 0,00</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Frete</div>
+                <div class="summary-value">Calculado no checkout</div>
+            </div>
+            <div class="summary-row summary-total">
+                <div class="summary-label">Total</div>
+                <div class="summary-value">R$ 0,00</div>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+            
+            <div class="coupon-section">
+                <h3 class="coupon-title">Cupom de Desconto</h3>
+                <p>Se você tem um cupom de desconto, aplique-o abaixo.</p>
+                <div class="coupon-form">
+                    <input type="text" class="coupon-input" placeholder="Código do cupom">
+                    <button class="apply-coupon">Aplicar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- You May Also Like Section -->
+        <section class="suggestions">
+            <h2 class="suggestions-title">Você Também Pode Gostar</h2>
+            <div class="suggestions-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/public/assets/mel.jpg" alt="Mel de Laranjeira">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Mel</div>
+                        <h3 class="product-title">Mel Silvestre 500 gr</h3>
+                        <div class="price">R$ 25,00</div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/160/160" alt="Kit Mel e Própolis">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Kit</div>
+                        <h3 class="product-title">Kit Mel e Própolis</h3>
+                        <div class="price">R$ 75,90</div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/public/assets/propolis 2.avif" alt="Própolis Verde">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Própolis</div>
+                        <h3 class="product-title">Extrato de Própolis 20 ml</h3>
+                        <div class="price">R$ 12,00</div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/public/assets/mel em favo.jpg" alt="Mel com Favo">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Mel</div>
+                        <h3 class="product-title">Mel com Favo 500 gr</h3>
+                        <div class="price">R$ 30,00</div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Ápiario do Reino</h3>
+                    <p>Desde 2010 fornecendo Ápiario do Reino e produtos apícolas de alta qualidade diretamente do produtor para sua casa.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="https://www.instagram.com/apiario_do_reino?igsh=MTNwaXFlam90Y3Zubw==" class="social-icon">i</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">y</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produto.html">Produtos</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contatos.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Produtos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mel Silvestre</a></li>
+                      <!--  <li><a href="#">Mel de Laranjeira</a></li>-->
+                        <li><a href="#">Própolis</a></li>
+                       <li><a href="#">Cera</a></li>
+                      <!--  <li><a href="#">Geleia Real</a></li>-->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li>contato@melpuro.com.br</li>
+                        <li>(24) 99877-6369</li>
+                        <li>Rua A , 170 , Cotiara</li>
+                        <li>Barra Mansa  - RJ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Ápiario do Reino. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

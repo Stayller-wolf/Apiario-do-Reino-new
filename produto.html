@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/assets/style.css">
+    <link rel="stylesheet" href="./public/assets/page_produto.css">
+    <script src="./public/script/carrinho.js" defer></script>
+    <script src="./public/script/add_check.js" defer></script>
+    <script src="./public/script/busca_produto.js" defer></script>
+    <script src="./public/script/filtro_preço.js" defer></script>
+    <title>Produtos - Ápiario do Reino</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="logo-icon">🐝</span>
+                    <span>Ápiario do Reino</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#" class="active">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="contatos.html">Contato</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <a href="carrinho.html">🛒</a>
+                    <span class="cart-count">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+        
+    <!-- Main Content -->
+    <div class="container">
+        <div class="search-section">
+            <div class="search-header">
+                <h1 class="search-title">Busca de Preços</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Busque por produtos...">
+                <button class="search-button">Buscar</button>
+            </div>
+        </div>
+        
+        <div class="content-with-sidebar">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">Categorias</h2>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <span>Mel</span>
+                            <span class="category-count">4</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Própolis</span>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Cera</span>
+                            <span class="category-count">2</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Kits e Presentes</span>
+                            <span class="category-count">2</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Acessórios</span>
+                            <span class="category-count">1</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">Preço</h2>
+                    <div class="price-range">
+                        <div class="price-inputs">
+                            <input type="number" class="price-input" placeholder="R$ Min">
+                            <input type="number" class="price-input" placeholder="R$ Max">
+                        </div>
+                        <input type="range" class="price-slider" min="0" max="100" value="50">
+                        <button class="apply-button">Aplicar</button>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">Tipos de Mel</h2>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <span>Silvestre</span>
+                            <span class="category-count">3</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Eucalipto</span>
+                            <span class="category-count">2</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Laranjeira</span>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Com Favo</span>
+                            <span class="category-count">2</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="filter-section">
+                    <button class="filter-button active">Todos</button>
+                    <button class="filter-button">Mel</button>
+                    <button class="filter-button">Própolis</button>
+                    <button class="filter-button">Kits</button>
+                    <button class="filter-button">Promoções</button>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <span style="color: black;">Exibindo 6 produtos</span>
+                    <select class="sort-select">
+                        <option value="price-asc">Menor Preço</option>
+                        <option value="price-desc">Maior Preço</option>
+                        <option value="name-asc">Nome (A-Z)</option>
+                        <option value="name-desc">Nome (Z-A)</option>
+                        <option value="rating">Avaliações</option>
+                    </select>
+                </div>
+                
+                <div class="results-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="discount-badge">-20%</div>
+                        <img src="/public/assets/mel.jpg" alt="Mel Silvestre" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">MEL</div>
+                            <h3 class="product-title">Mel Silvestre Puro</h3>
+                            <div>500g</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <div class="rating-count">(32)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">R$ 25,00</div>
+                                <div class="old-price">R$ 30,00</div>
+                            </div>
+                            <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="discount-badge">-25%</div>
+                        <img src="/public/assets/mel 1kg.jpg" alt="Mel Silvestre Premium" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">MEL</div>
+                            <h3 class="product-title">Mel Silvestre Puro</h3>
+                            <div>1kg</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <div class="rating-count">(18)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">R$ 45,00</div>
+                                <div class="old-price">R$ 60,00</div>
+                            </div>
+                            <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <img src="/public/assets/mel em favo.jpg" alt="Mel com Favo" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">MEL</div>
+                            <h3 class="product-title">Mel com Favo</h3>
+                            <div>500g</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <div class="rating-count">(19)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">R$ 30,00</div>
+                            </div>
+                            <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="new-badge">Novo</div>
+                        <img src="/public/assets/mel em favo.jpg" alt="Mel com favo 1kg" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">MEL</div>
+                            <h3 class="product-title">Mel com favo</h3>
+                            <div>1kg</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <div class="rating-count">(8)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">R$ 60,00</div>
+                            </div>
+                            <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+
+                               <!-- Product 5 -->
+                    <div class="product-card">
+                        <img src="/public/assets/propolis 2.avif" alt="Própolis" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">PRÓPOLIS</div>
+                            <h3 class="product-title">Extrato de Própolis</h3>
+                            <div>20ml</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <div class="rating-count">(12)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">R$ 12,00</div>
+                            </div>
+                            <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <img src="/public/assets/cera bruta 2.webp" alt="Cera bruta" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">CERA</div>
+                            <h3 class="product-title">Cera bruta</h3>
+                            <div>1kg</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <div class="rating-count">(5)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">R$ 55,00</div>
+                            </div>
+                            <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/public/assets/cera aveolada.webp" alt="Cera alveolada" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">CERA</div>
+                            <h3 class="product-title">Cera alveolada</h3>
+                            <div>1kg</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <div class="rating-count">(5)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">R$ 88,00</div>
+                            </div>
+                            <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/public/assets/quadrilhos ninho.webp" alt="Quadrilhos" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">QUADROS</div>
+                            <h3 class="product-title">Quadrilhos para ninho</h3>
+                            <div>50 und desmontados</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <div class="rating-count">(5)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">R$ 250,00</div>
+                            </div>
+                            <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <img src="/public/assets/quadrilhos melgueira.webp" alt="Quadrilhos" class="product-image">
+                    <div class="product-details">
+                        <div class="product-category">QUADROS</div>
+                        <h3 class="product-title">Quadrilhos melgueira</h3>
+                        <div>50 und desmontados</div>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <div class="rating-count">(5)</div>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">R$ 250,00</div>
+                        </div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div> 
+                <!-- Pagination -->
+                <!-- <div class="pagination">
+                    <button class="pagination-button active">1</button>
+                    <button class="pagination-button">2</button>
+                    <button class="pagination-button">3</button>
+                    <button class="pagination-button">></button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+        <!-- Seção Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Assine nossa Newsletter</h2>
+                <p>Receba receitas, dicas de saúde e ofertas exclusivas diretamente no seu e-mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Seu endereço de e-mail">
+                    <button type="submit" class="newsletter-btn">Assinar</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h3>Ápiario do Reino</h3>
+                        <p>Produtos artesanais de apiário desde 2022. Comprometidos com a qualidade e a sustentabilidade.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon">f</a>
+                            <a href="#" class="social-icon">t</a>
+                            <a href="#" class="social-icon">in</a>
+                            <a href="https://www.instagram.com/apiario_do_reino?igsh=MTNwaXFlam90Y3Zubw==" class="social-icon">ig</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Categorias</h3>
+
+                        <ul class="footer-links">
+                            <li><a href="produto.html">Todos os Méis</a></li>
+                            <li><a href="produto.html">Própolis e Extratos</a></li>
+                            <!---<li><a href="#">Pólen e Geleia Real</a></li>--->
+                            <!---<li><a href="#">Kits e Presentes</a></li>--->
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Informações</h3>
+                        <ul class="footer-links">
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="sobre.html">Nosso Apiário</a></li>
+                            <li><a href="#">Dúvidas Frequentes</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Contato</h3>
+                        <ul class="footer-links">
+                            <li>📞 (24) 99877-6369</li>
+                            <li>✉️ contato@melpuro.com.br</li>
+                            <li>🏠 Rua A, 170<br>Cotiara ,Barra Mansa - RJ</li>
+                            <li>⏰ Seg-Sex: 9h às 18h</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Ápiario do Reino - Todos os direitos reservados.
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
