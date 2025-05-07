@@ -28,6 +28,19 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        /* Ajuste para telas menores */
+        @media (max-width: 768px){
+            .container{
+                padding: 0 15px; /*Reduz o padding em telas menores */
+            }
+        }
+        @media (max-width: 480 px){
+            .container{
+                padding: 0 10px; /*Reduz ainda mais o padding para smartphones */
+            }
         }
 
         header {
