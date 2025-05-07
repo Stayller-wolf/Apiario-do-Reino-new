@@ -61,7 +61,17 @@
             color: var(--secondary);
             display: flex;
             align-items: center;
-            margin-left: -85px;
+            gap: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /*Ajuste para telas menores */
+        @media (max-width: 768px){
+            .logo {
+                font-size: 1rem; /* Reduz o tamanho da logo em dispositivos menores*/
+
+            }
         }
 
         .logo-icon {
