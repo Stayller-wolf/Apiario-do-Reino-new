@@ -9,6 +9,29 @@
     <title>Ápiario do Reino - Produtos do Apiário</title>
 </head>
 <body>
+    <!-- Tela de senha - apiario do reino -->
+     <div id ="login-overlay" style="
+     position: fixed;
+     top:0 ; left:0;
+     width: 100vw; height: 100vh;
+     background: linear-gradient (135deg, #3e2723, #4e342e);
+     background-color: #ff9800; 
+     display: flex;
+     flex-direction: column;
+     justify-content:center;
+     align-items: center;
+     z-index: 999999;
+     font-family: Arial, sans-serif;
+     ">
+     <div style="background:white; padding: 30px; border-radius:10px;text-align: center; box-shadow: 0px 4px 10px rgba (0,0,0,0.2);">
+        <h2 styler="color: #000000 !important; display: block !important; margin: 0 0 8px 0; font-size: 22px; font-weight: 700;">Ápiario do Reino</h2> 
+        <p styler="color: #555; margin-botom: 15px;">Digite a senha para acessar o site:</p>
+        <input type="password" id="input-senha" placeholder="Sua senha" style="padding: 10px; width:80%; margin-bottom: 15px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+        <br>
+        <button onclick="verificarSenha()" styler="padding: 10 px 20px; font-size: 16px; background-color: #f7b731; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Entrar</button>
+        <p id="erro-msg" style="color: red; display:none; margin-top: 10px;">Senha incorreta! Tente novamente.</p>
+    </div>
+    </div>
     <header>
         <div class="container">
             <nav>
@@ -287,5 +310,26 @@
             </div>
         </div>
     </footer>
+<script>
+    function verificarSenha() {
+        const senhaCorreta = "123456";
+        const entrada = document.getElementById("input-senha").value;
+     if (entrada === senhaCorreta){
+        //Esconde a tela de login e libera o site
+        document.getElementById("login-overlay").style.display = "none";
+     } else {
+        // Mostra a mensagem de erro
+        document.getElementById("erro-msg").style.display = "block";
+     }   
+
+    }
+    // Permitir apertar "Enter" para enviar a senha
+    document.getElementById("input-senha").adEvenListener("keypress",function(event){
+        if (event.key === "Enter"){
+            verificarSenha();
+        }
+    });
+
+</script>
 </body>
 </html>
